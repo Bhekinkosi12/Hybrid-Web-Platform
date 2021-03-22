@@ -80,6 +80,9 @@ namespace HybridWebPlatform
 		public event Action<Uri> PageLoadFinished;
 		public event Action<Uri, string, int> PageLoadError;
 		public event Action<Uri> NewWebBrowserWindowOpenRequest;
+		
+		
+		
 
 		//Required Js actions
 
@@ -151,7 +154,7 @@ namespace HybridWebPlatform
 					{
 						//Waiting for page to load before applying javascript
 						//Required for iOS (we can not navigate that contain #anchors in iOS)
-						Task.Delay(100).Wait();
+						Task.Delay(1000).Wait();
 					}
 					LoadHashAnchor(hashResult);
 				});
